@@ -41,10 +41,9 @@ def train():
     optimizer = optim.SGD(model.parameters(), lr=lr, momentum=0.9)
     criterion = nn.CrossEntropyLoss()
 
+    model.train()
     for epoch in range(start_epoch, num_epochs):
         print('Epoch: {}'.format(epoch))
-
-        model.train()
 
         running_loss = 0
         count = 0
